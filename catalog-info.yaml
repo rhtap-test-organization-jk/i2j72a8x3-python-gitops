@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: i2j72a8x3-python-gitops
+  description: This is GitOps manifest for i2j72a8x3-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: i2j72a8x3-python
+    backstage.io/kubernetes-id: i2j72a8x3-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: i2j72a8x3-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:i2j72a8x3-python
